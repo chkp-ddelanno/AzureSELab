@@ -37,7 +37,7 @@ resource "azurerm_virtual_machine" "chkpmgmt" {
     disable_password_authentication = false
   
     ssh_keys {
-      path = "/home/notused/.ssh/authorized_keys"
+      path = "/home/azureuser/.ssh/authorized_keys"
       key_data = file("${path.module}/azure_public_key")
     }
   }
